@@ -15,7 +15,7 @@ requests_queue = Queue()
 BATCH_SIZE = 1
 CHECK_INTERVAL = 0.1
 
-tokenizer = AutoTokenizer.from_pretrained("_BBCFullTexttDocument")
+tokenizer = AutoTokenizer.from_pretrained("gpt2-large")
 model = AutoModelWithLMHead.from_pretrained("_BBCFullTexttDocument", return_dict=True)
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model.to(device)
